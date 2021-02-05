@@ -1,6 +1,6 @@
 <?php
 
-require_once "BDD";
+require_once "BDD.php";
 
 if (isset($_SESSION["IDCli"])){
     header("loation: Html.php");
@@ -28,20 +28,22 @@ if(empty($motdepasse)){
     $err_motdepasse = "veuilliez remplir le champs mot de passe";
 }
 
-$req = $BDD->query("SELECT *
+$req = $db->prepare("SELECT *
             FROM Client
-            WHERE Email = ? AND motdepasse = ?",
-            array($Email, crypt($motdepasse,"$6$rounds=5000$macleapersonnaliseretagardersecret$")));
-$req = $req->fetch();
+            WHERE Email = ? AND motdepasse = ?");
+        $req->execute(   
+            array($Email, crypt($motdepasse,"secret")));
+$data = $req->fetch ();
 
-if (!isset($req["IDCli"])){
+if (!isset($data["IDCli"])){
     $valid = false;
     $err_Email = "L'Email ou le mot de passe est incorrecte";
-}elseif($req["n_motdepasse"] == 1)
-    $BDD->dba_insert("UPDATE Client SET n_motdepasse = 0 WHERE IDCli = ?",
-    array($req["IDCli"]));
+}elseif($data["n_motdepasse"] == 1)
+    $db->prepare("UPDATE Client SET n_motdepasse = 0 WHERE IDCli = ?",
+    $req->execute(array($data["IDCli"])));
+    $data = $req->fetch();
 
-if ($req["IDCli"] == ""){
+if ($data["IDCli"] == ""){
     $valid = false;
     $err_Email = "L'Email ou le mot de passe est incorrecte";
 }    

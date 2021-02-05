@@ -41,13 +41,7 @@ if (!isset($_SESSION["pseudo"])) {
 <body>
 
 <div>
-<img src="Downloads/SweatF1.jpg" alt="Sweat Femme 1"/><img src="Downloads/JeanF2" alt="Jean Femme 2"/>
-
-
-<img src="Downloads/Sweat1" alt ="Sweat Homme 1"/><img src="Downloads/JeanH2" alt="Jean Homme 2"/>
-
-</div>
-
+<img src="php-site-ecommerce/Photo Shop e-commerce/SweatF1.jpg" alt="Sweat Femme 1"/><img src="php-site-ecommerce/Photo Shop e-commerce/tshirtF2.jpg" alt="T-shirt Femme 2"/>
 
 </body>
 
