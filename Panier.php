@@ -122,7 +122,7 @@ function compterArticles()
 function supprimePanier(){
    unset($_SESSION['panier']);
 }
-
+<<<<<<< Updated upstream
 ?>
 
 
@@ -160,4 +160,6 @@ function supprimePanier(){
 
     </html>
 =======
->>>>>>> main
+
+?>
+>>>>>>> Stashed changes
