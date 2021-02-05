@@ -1,6 +1,6 @@
 <?php
 
-require_once "BDD";
+require_once "BDD.php";
 
 if (!empty($_POST)){
     extract($_POST);
@@ -53,7 +53,7 @@ if($valid){
     $motdepasse = crypt($motdepasse,"$6$rounds=5000$macleapersonnaliseretagardersecret$");
     $date_creation_compte = date ('Y-m-d H:i:d');
 
-    $BDD->insert ("INSERT INTO Client(IDCli,pseudo,dateNaiss,villeCLI,Email,motdepasse) 
+    $db->insert ("INSERT INTO Client(IDCli,pseudo,dateNaiss,villeCLI,Email,motdepasse) 
     VALUES(?, ?, ?, ?, ?");
     array($IDCli,$Pseudo, $dateNaiss, $villeCli, $Email, $motdepasse);
 
