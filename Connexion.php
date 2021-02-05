@@ -70,6 +70,7 @@ if ($req["IDCli"] == ""){
     <button type="button" value="Inscription">
     S'inscrire
     </div>
+    </ul>
     </header>
     <body>
 
@@ -87,8 +88,10 @@ if ($req["IDCli"] == ""){
         <label for="Mdp">Confirmation du mot de passe :</label>
         <input type="password" id="pwd" name="user_ConfirmPassword">
     </div>
-
-
+    <div class="button">
+        <button type="button">Se connecter</button>
+    </div> 
+    
 
     </body>
 

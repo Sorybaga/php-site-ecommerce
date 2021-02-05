@@ -87,6 +87,7 @@ if($valid){
     Se connecter 
     </a>
     </div>
+    </ul>
     </header>
     <body>
 
@@ -114,6 +115,10 @@ if($valid){
     <div>
         <label for="Mdp">Confirmation du mot de passe :</label>
         <input type="password" id="pwd" name="user_ConfirmPassword">
+    </div>
+
+    <div class="button">
+        <button type="submit"> S'inscrire</button>
     </div>
 
 

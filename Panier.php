@@ -100,3 +100,38 @@ function supprimerArticle($Produit){
 
 }
 ?>
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StyleConnexion.css"/>
+    <header><div id= "ClothesShop-section-header" class= "ClothesShop-section">
+    <nav class="slide-nav_wrapper">
+    <ul id="SlideNav" class="slide-nav">
+    <li class="slide-nav_item border-bottom">
+    <a> Acceuil </a>
+    </li>
+    <button type="button" value="Connexion" >
+    Se connecter 
+    </a>
+    <button type="button" value="Inscription">
+    S'inscrire
+    </div>
+    </header>
+    <body>
+
+   <div class = "empty-bag-contents-holder">
+   <h2 class="empty-bag-title" data-bind="localeText: {key: 'lang_bag_empty_heading'}">Votre panier est actuellement vide.</h2>
+
+   
+
+
+
+    </body>
+
+
+    </html>
